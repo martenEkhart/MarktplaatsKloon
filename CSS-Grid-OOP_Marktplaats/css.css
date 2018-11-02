@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(2, 2, 2);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "title title"
+        "heade header"
+        "sidebar sidebar"
+        "content content"
+        "footer footer";
+    grid-gap: 10px;
+}
+
+.title {
+    grid-area: title;
+}
+
+.header {
+    grid-area: header;
+    /* justify-self: start; */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /* display: grid; */
+}
+
+.content{
+    grid-area: content;
+
+}
+
+.spotlight {
+    margin-top: 5%;
+    margin-left: 7%;
+    height:70%;
+    width: 40%;
+    float: left;
+    background-color: rgb(246, 246, 246);
+}
+
+.spotlight2 {
+    margin-top: 5%;
+    margin-left: 7%;
+    height:70%;
+    width: 40%;
+    float: left;
+    background-color: rgb(246, 246, 246);
+}
+.footer {
+    grid-area: footer;
+}
+
+.grid div:nth-child(even) {
+    /* background-color: red; */
+}
+
+.grid div:nth-child(odd) {
+    /* background-color: green; */
+}
+
+.nav-header-main {
+    height: 80%;
+    display: block;
+    /* flex-direction: row; */
+}
+
+.header-logo {
+    width: 48px;
+    padding-right: 20px;
+}
+
+.nav-header-main img {
+    height: 100%;
+}
+
+.nav-header-main ul {
+    height: 100%;
+}
+
+.nav-header-main ul li {
+    list-style: none;
+    float: left;
+    height: 100%;
+}
+
+.nav-header-main ul li a {
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+    border-radius: 6px;
+    line-height: 48px;
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.header-login {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.login-status {
+    text-align: right;
+    font-size: 26px;
+    font-family: arial;
+    color: #111;
+    /* margin-right: 600px; */
+}
+
+
+.form-signup {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 200px;
+    /* float: right; */
+}
+
+.form-signup input {
+    width: calc(100% - 30px);
+    height: 30px;
+    padding: 0 15px;
+    margin-bottom: 6px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    background-color: #F6F6F6;
+    float: right;
+    font-family: arial;
+    /* margin-right: 10%; */
+}
+
+.form-signup button {
+    display: block;
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    font-family: arial;
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+}
+.signuperror {
+    padding-top: 14px;
+    font-family: arial;
+    font-size: 16px;
+    color: red;
+    text-align: center;
+}
+
+.signupsuccess {
+    padding-top: 14px;
+    font-family: arial;
+    font-size: 16px;
+    color: green;
+    text-align: center;
+}
+
+
+.article-container {
+    width: 900px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.article-container .article-box {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.zoek-input {
+    padding: 0 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 22px;
+}
+
+.zoek-button {
+    width: 100px;
+    height: 44px;
+    font-size: 22px;
+}
+
+
+
+@media screen and (min-width: 736px) 
+{
+    .grid {
+        display: grid;
+        grid-template-columns: 2fr 600px 600px 2fr;
+        grid-template-rows: 2fr 4fr 14fr 14fr;
+        grid-template-areas: 
+            "title title title title"
+            ".  . header ."
+            ". sidebar sidebar ."
+            "content content content content"
+            ". footer footer .";
+    }
+
+ 
+}
